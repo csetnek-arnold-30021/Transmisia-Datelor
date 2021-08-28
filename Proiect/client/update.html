@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles/update.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <div id="update">
+        <h1>Actualizare monitor cu id-ul: {{ id }}</h1> <br>
+        <div class="label">Monitor name:</div>
+        <input type="text" v-model="monitor.name"><br></br>
+        <div class="label">Color:</div>
+        <input type="text" v-model="monitor.color"><br></br>
+        <div class="label">Diagonal:</div>
+        <input type="text" v-model="monitor.diagonal"><br></br>
+        <div class="label">Year:</div>
+        <input type="text" v-model="monitor.year"><br></br>
+        <div class="label">Description:</div>
+        <input type="text" v-model="monitor.description"><br></br>
+        <div class="label">Weight: </div>
+        <input type="text" v-model="monitor.weight"><br></br>
+        <div class="label"> Price:</div>
+
+        <button v-on:click="update(monitor.id)">Save</button>
+
+        <p>{{message}}</p>
+
+    </div>
+
+    <script src="src/update.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles/vue-material.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/monitors-service.js"></script>
+
+    <!-- Tab Info -->
+    <title>Adaugare Monitor</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand a" href="index.html">
+             Lista Monitoare
+        </a>
+    </nav>
+    <!-- ------------- -->
+
+    <div id="addMonitor">
+        <div id="details">
+
+            <div class="title"> Adaugare Monitor: </div>
+
+            <label>Monitor name:</label>
+            <input type="text" id="name" name="name" ><br><br>
+
+            <label>Diagonal:</label>
+            <input type="text" id="diagonal" name="diagonal" ><br><br>
+
+            <label>Color:</label>
+            <input type="text" id="color" name="color" ><br><br>
+
+            <label>Weight:</label>
+            <input type="text" id="weight" name="weight" ><br><br>
+
+            <label>Description:</label>
+            <input type="text" id="description" name="description" ><br><br>
+
+            <label>Year:</label>
+            <input type="text" id="year" name="year" ><br><br>
+
+            <label>Price:</label>
+            <input type="text" id="price" name="price" ><br><br>
+
+
+
+            <br><br><br>
+            <button class="upDt" href="index.html" @click="addMonitor()">Adaugare</button>
+            <br><br><br> <br><br><br>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/addMonitors.js"></script>
+   
+</body>
+
+</html>

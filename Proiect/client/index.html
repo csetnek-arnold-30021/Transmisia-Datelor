@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Users manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/vue-material.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/monitors-service.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="title">Monitors</div>
+
+        <p style="text-align: center" v-if="monitors.length == 0">No monitors found</p>
+
+        <ul class="user-list" v-if="monitors.length > 0">
+            <li>
+                <div class="user-row-header">
+                    <div class="user-name">Nume</div>
+                    <div class="user-city">Pret</div>
+                </div>
+            </li>
+
+            <li v-for="monitor in monitors">
+                <div class="">
+                    <a :href="'details.html?id='+monitor.id">{{ monitor.name }}</a>
+                    <span class=""><i>{{ monitor.price }}</i></span>
+                    <button v-on:click="deleteMonitor(monitor.id)">Delete</button>
+                    <a :href="'update.html?id='+monitor.id" target="_self">Update</a>
+                </div>
+            </li>
+        </ul>
+        <a :href="'addMonitor.html'">ADAUGARE MONITOR NOU</a>
+    </div>
+    <script src="src/app.js"></script>
+</body>
+
+</html>
